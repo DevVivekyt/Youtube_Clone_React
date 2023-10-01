@@ -36,7 +36,7 @@ export const signin = async (req, res, next) => {
         httpOnly: true,
       })
       .status(200)
-      .json(createSuccess(200, `Welcome back ${user.name}`, other));
+      .json(createSuccess(1, `Welcome back ${user.name}`, { other, token }));
   } catch (err) {
     next(err);
   }

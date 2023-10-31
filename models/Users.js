@@ -4,28 +4,25 @@ const UserSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
+      require: true,
       unique: true,
     },
     email: {
       type: String,
-      required: true,
+      require: true,
       unique: true,
     },
     password: {
       type: String,
-      required: true,
+      require: true,
     },
-    img: {
+    confirmPassword: {
       type: String,
+      require: true,
     },
-    subscribers: {
-      type: Number,
-      default: 0,
-    },
-    subscribedUsers: {
-      type: [String],
-      default: 0,
+    profilePic: {
+      type: String,
+      require: true,
     },
   },
   { timestamps: true }
